@@ -21,26 +21,24 @@ p {
     line-height: 1.4;
 }
 
-.textCenter {
+.text-center {
     text-align: center;
 }
 
-.imgCenter {
+.img-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* card container */
-.cardContainer {
+/* cards */
+.card-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-
-/* cards */
 .card {
     margin: 10px;
     margin-bottom: 30px;
@@ -53,6 +51,25 @@ p {
     width: 500px;
     box-shadow: 6px 6px 4px var(--darker);
 }
+
+.card--highlight:hover {
+    background-color: var(--blueLighter);
+}
+
+.card--highlight:focus {
+    color: white;
+    background-color: var(--blue);
+}
+
+.card--warning:hover {
+    background-color: var(--purpleLighter);
+}
+
+.card--warning:focus {
+    color: white;
+    background-color: var(--purple);
+}
+
 
 .card__buttonContainer {
     position: absolute;
@@ -68,6 +85,15 @@ p {
     color: var(--dark);
     width: 50%;
     height: 32px;
+}
+
+.card__button--light {
+    border-color: var(--blueLighter);
+
+}
+
+.card__button--dark {
+    border-color: var(--purpleLighter);
 }
 
 @keyframes titleAnimateShadow {
@@ -87,79 +113,55 @@ p {
     animation-timing-function: ease-in-out;
 }
 
+.card__title--dark {
+    color: var(--purpleLighter);
+    animation-direction: alternate;
+
+}
+
+.card__title--light {
+    color: var(--blueLighter);
+    animation-direction: alternate-reverse;
+
+}
+
 .card__img {
     border: 1px solid var(--dark);
     border-radius: 12px;
+}
+
+.card__img--dark {
+    border-color: var(--purpleLighter);
+
+}
+
+.card__img--light {
+    border-color: var(--blueLighter);
+
 }
 
 .card__p {
     padding-left: 10px;
 }
 
-
-/* card skins */
-/*   light */
-.cardDark {
+.card--dark {
     background-color: var(--dark);
     color: var(--light);
     border-color: var(--purpleLighter);
 }
 
-.cardDark__button {
-    border-color: var(--purpleLighter);
-}
-
-.cardDark--warning:hover {
-    background-color: var(--purpleLighter);
-}
-
-.cardDark--warning:focus {
-    color: white;
-    background-color: var(--purple);
-}
-
-.cardDark__title {
-    color: var(--purpleLighter);
-    animation-direction: alternate;
-}
-
-.cardDark__img {
-    border-color: var(--purpleLighter);
-}
-
-
-/*   dark */
-.cardLight {
+.card--light {
     background-color: var(--light);
     color: var(--dark);
     border-color: var(--blueLighter);
 }
 
-.cardLight__button {
-    border-color: var(--blueLighter);
-}
-
-.cardLight--highlight:hover {
-    background-color: var(--blueLighter);
-}
-
-.cardLight--highlight:focus {
-    color: white;
-    background-color: var(--blue);
-}
 
 
-.cardLight__title {
-    color: var(--blueLighter);
-    animation-direction: alternate-reverse;
-}
 
-.cardLight__img {
-    border-color: var(--blueLighter);
-}
 
 /*   
-2DO Semantic html / SASS / Uppercase / responsive
-2DO amake document tinto a reference project for all tricks with CSS 
+2DO Semantic html / SASS+LESS / Uppercase / responsive
+2DO make  this a reference document for all tricks with CSS 
   - responsive
   */
